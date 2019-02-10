@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val values = ContentValues()
         values.put(ContactProvider.NAME, editText2.text.toString())
 
-        values.put(ContactProvider.GRADE, editText3.text.toString())
+        values.put(ContactProvider.EMAIL, editText3.text.toString())
 
         val uri = contentResolver.insert(ContactProvider.CONTENT_URI, values)
 
@@ -42,8 +42,10 @@ class MainActivity : AppCompatActivity() {
             do {
                 Toast.makeText(this,
                         c.getString(c.getColumnIndex(ContactProvider._ID)) +
-                                ", " + c.getString(c.getColumnIndex(ContactProvider.NAME)) +
-                                ", " + c.getString(c.getColumnIndex(ContactProvider.GRADE)),
+                                ", " + c.getString(c.getColumnIndex(ContactProvider.NAME))
+                                //", " + c.getString(c.getColumnIndex(ContactProvider.PHONE)) +
+                                //", " + c.getString(c.getColumnIndex(ContactProvider.EMAIL))
+                                ,
                         Toast.LENGTH_SHORT).show()
             } while (c.moveToNext())
         }

@@ -158,7 +158,8 @@ class ContactProvider : ContentProvider() {
 
         internal val _ID = "_id"
         internal val NAME = "name"
-        internal val GRADE = "grade"
+        internal val PHONE = "phone"
+        internal val EMAIL = "email"
 
         private val STUDENTS_PROJECTION_MAP: HashMap<String, String>? = null
 
@@ -179,6 +180,7 @@ class ContactProvider : ContentProvider() {
         internal val CREATE_DB_TABLE = " CREATE TABLE " + STUDENTS_TABLE_NAME +
                 " (_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 " name TEXT NOT NULL, " +
-                " grade TEXT NOT NULL);"
+                " phone TEXT NOT NULL, " +
+                " email TEXT NOT NULL);"
     }
 }
