@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.oscar.contentprovider.MainActivity">
+    tools:context="com.example.garoz.lab51.MainActivity">
 
     <TextView
         android:id="@+id/textView1"
@@ -34,14 +34,14 @@
         android:layout_centerHorizontal="true"/>
 
     <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:text="@string/add_name"
-        android:layout_below="@+id/editText3"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:onClick="onClickAddName"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="149dp"
+        android:onClick="onClickAddName"
+        android:text="@string/add_name" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -51,33 +51,24 @@
         android:layout_alignEnd="@+id/imageButton"/>
 
     <EditText
+        android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:layout_alignTop="@+id/editText"
-        android:layout_alignStart="@+id/textView1"
-        android:layout_alignEnd="@+id/textView1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="227dp"
         android:hint="@string/name"
-        android:textColorHint="@android:color/holo_blue_light"/>
+        android:textColorHint="@android:color/holo_blue_light" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/editText3"
-        android:layout_below="@+id/editText"
-        android:layout_alignStart="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2"
-        android:hint="@string/grade"
-        android:textColorHint="@android:color/holo_blue_bright"
-        android:inputType=""/>
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/retrive_student"
-        android:id="@+id/button"
-        android:layout_below="@+id/button2"
-        android:layout_alignEnd="@+id/editText3"
-        android:layout_alignStart="@+id/button2"
-        android:onClick="onClickRetrieveStudents"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="239dp"
+        android:hint="@string/grade"
+        android:inputType=""
+        android:textColorHint="@android:color/holo_blue_bright" />
+
 </RelativeLayout>

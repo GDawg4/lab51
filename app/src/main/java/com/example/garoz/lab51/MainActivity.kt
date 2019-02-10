@@ -28,27 +28,4 @@ class MainActivity : AppCompatActivity() {
 
         Toast.makeText(baseContext, uri!!.toString(), Toast.LENGTH_LONG).show()
     }
-
-    fun onClickRetrieveStudents(view:View) {
-        // Retrieve student records
-        val URL = "content://com.example.garoz.ContactProvider"
-
-        val students = Uri.parse(URL)
-
-        val c = contentResolver.query(students, null, null, null, "name")
-
-
-        if (c.moveToFirst()) {
-            do {
-                Toast.makeText(this,
-                        c.getString(c.getColumnIndex(ContactProvider._ID)) +
-                                ", " + c.getString(c.getColumnIndex(ContactProvider.NAME))
-                                //", " + c.getString(c.getColumnIndex(ContactProvider.PHONE)) +
-                                //", " + c.getString(c.getColumnIndex(ContactProvider.EMAIL))
-                                ,
-                        Toast.LENGTH_SHORT).show()
-            } while (c.moveToNext())
-        }
-        c.close();
-    }
 }
